@@ -1,7 +1,12 @@
 const flock = [];
 
+let alignmentSlider, cohesionSlider, separationSlider;
+
 function setup() {
     createCanvas(640, 360);
+    alignmentSlider = createSlider(0, 5, 1, 0.1);
+    cohesionSlider = createSlider(0, 5, 1, 0.1);
+    separationSlider = createSlider(0, 5, 1, 0.1);
     for (let i = 0; i < 100; i++) {
         flock.push(new Boid());
     }
